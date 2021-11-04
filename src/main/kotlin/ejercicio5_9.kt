@@ -24,6 +24,7 @@ fun main(args: Array<String>) {
         //Cuenta("125", -0.1),
         Cuenta("126", 700.0)
     ).forEach {
+        print("Count del array es: ${p.cuentas.size} -> ")
         println("El numero de cuentas es ${p.agregarCuenta(it)}")
     }
 
