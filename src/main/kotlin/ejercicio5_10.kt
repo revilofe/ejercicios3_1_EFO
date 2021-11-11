@@ -57,7 +57,7 @@ class ConjuntoLibros(
 
 
     /**
-     * Introduce un libro.
+     * Introduce un libro, si el libro ya existe no hace nada.
      * return: Devuelve el total de libros.
      */
     fun introducir(libro: Libro): Int {
@@ -153,7 +153,8 @@ fun main(args: Array<String>) {
     println("eliminado kotlin in action")
     println(conjunto)
 
-    conjunto.eliminar { "Una Guiri".equals(it?.autor) }
+
+    conjunto.eliminar { "Una Guiri".equals(it?.autor)}
     println("eliminado Una Guiri")
     println(conjunto)
 

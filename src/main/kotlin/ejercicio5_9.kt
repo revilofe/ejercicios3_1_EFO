@@ -54,9 +54,7 @@ class Cuenta(val numeroCuenta: String, var saldo: Double = 0.0) {
     }
 
     companion object {
-        fun isMorosa(persona: Persona): Boolean {
-            return persona.cuentas.filter { (it?.saldo ?: 0.0) < 0.0 }.size > 0
-        }
+        fun isMorosa(persona: Persona)= persona.cuentas.filter { (it?.saldo ?: 0.0) < 0.0 }.size > 0
 
         fun transferencia(
             pOrigen: Persona,
